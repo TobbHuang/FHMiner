@@ -25,4 +25,8 @@ public class DGPair {
         return new DGPair(from, to);
     }
 
+    public void print() {
+        System.out.println(from + " -> " + to);
+    }
+
 }

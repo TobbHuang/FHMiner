@@ -1,6 +1,7 @@
 package org.fhm.log.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by huangtao on 2017/2/27.
@@ -9,8 +10,8 @@ import java.util.ArrayList;
  */
 public class LogInfo {
 
-    public ArrayList<String> taskName = new ArrayList<>();
+    public List<String> taskNames = new ArrayList<>();
 
-    public ArrayList<String> traces = new ArrayList<>();
+    public List<Trace> traces = new ArrayList<>();
 
 }

@@ -7,6 +7,8 @@ import org.deckfour.xes.info.XLogInfoFactory;
 import org.deckfour.xes.model.XLog;
 import org.deckfour.xes.model.XTrace;
 import org.fhm.log.model.LogInfo;
+import org.fhm.log.model.Task;
+import org.fhm.log.model.Trace;
 
 import java.io.File;
 import java.util.Iterator;
@@ -29,7 +31,7 @@ public class LogParser {
         LogInfo logInfo = new LogInfo();
 
         logParser.convertXesToBasicData(xesFile, logInfo);
-        if (logInfo.traces.size() == 0 || logInfo.taskName.size() == 0) {
+        if (logInfo.traces.size() == 0 || logInfo.taskNames.size() == 0) {
             throw new Exception("log is empty");
         }
 
@@ -62,18 +64,17 @@ public class LogParser {
                     .iterator();
 
             while (iterator.hasNext()) {
-                logInfo.taskName.add(iterator.next().getId());
+                logInfo.taskNames.add(iterator.next().getId());
             }
 
             for (int i = 0; i < log.size(); i++) {
                 XTrace xTrace = log.get(i);
-                String tmpTrace = "";
+                Trace tmpTrace = new Trace();
                 for (int j = 0; j < xTrace.size(); j++) {
-                    tmpTrace += xTrace.get(j).getAttributes().get(attribute).toString();
+                    tmpTrace.addTask(new Task(xTrace.get(j).getAttributes().get(attribute).toString()));
                 }
                 logInfo.traces.add(tmpTrace);
             }
-            logInfo.traces.add("AABCD");
         } catch (Exception e) {
             e.printStackTrace();
         }

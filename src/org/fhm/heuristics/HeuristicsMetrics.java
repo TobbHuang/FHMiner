@@ -1,6 +1,7 @@
 package org.fhm.heuristics;
 
 import org.fhm.log.model.LogInfo;
+import org.fhm.log.model.Trace;
 
 /**
  * Created by huangtao on 2017/2/28.
@@ -23,7 +24,7 @@ public class HeuristicsMetrics {
     public HeuristicsMetrics(LogInfo log) {
         this.logInfo = log;
         // start and end
-        countOfTasks = log.taskName.size() + 2;
+        countOfTasks = log.taskNames.size() + 2;
 
         calRelation();
         calDependencyMeasures();
@@ -37,19 +38,19 @@ public class HeuristicsMetrics {
         directSuccessorCounting = new int[countOfTasks][countOfTasks];
         lengthTwoLoopsCounting = new int[countOfTasks][countOfTasks];
 
-        for (String trace : logInfo.traces) {
-            directSuccessorCounting[0][logInfo.taskName.indexOf(trace.charAt(0) + "") + 1]++;
-            directSuccessorCounting[logInfo.taskName.indexOf(trace.charAt(trace.length() - 1) + "") + 1][countOfTasks
-                    - 1]++;
+        for (Trace trace : logInfo.traces) {
+            directSuccessorCounting[0][logInfo.taskNames.indexOf(trace.getTask(0).getName()) + 1]++;
+            directSuccessorCounting[logInfo.taskNames.indexOf(trace.getTask(trace.getLength() - 1).getName()) +
+                    1][countOfTasks - 1]++;
 
-            for (int i = 0; i < trace.length() - 1; i++) {
-                int fromIndex = logInfo.taskName.indexOf(trace.charAt(i) + "");
-                int toIndex = logInfo.taskName.indexOf(trace.charAt(i + 1) + "");
+            for (int i = 0; i < trace.getLength() - 1; i++) {
+                int fromIndex = logInfo.taskNames.indexOf(trace.getTask(i).getName());
+                int toIndex = logInfo.taskNames.indexOf(trace.getTask(i + 1).getName());
                 directSuccessorCounting[fromIndex + 1][toIndex + 1]++;
 
                 // length two loop
-                if (i < trace.length() - 2 && fromIndex != toIndex && fromIndex == logInfo.taskName.indexOf(trace
-                        .charAt(i + 2) + "")) {
+                if (i < trace.getLength() - 2 && fromIndex != toIndex && fromIndex == logInfo.taskNames.indexOf(trace
+                        .getTask(i + 2).getName())) {
                     lengthTwoLoopsCounting[fromIndex + 1][toIndex + 1]++;
                 }
             }
@@ -113,16 +114,17 @@ public class HeuristicsMetrics {
 
     public void print() {
         System.out.println("task name:");
-        for (String name : logInfo.taskName) {
-            System.out.print(name + " ");
+        for (String name : logInfo.taskNames) {
+            System.out.print(name + ", ");
         }
         System.out.println();
 
-        System.out.println("traces:");
-        for (String trace : logInfo.traces) {
-            System.out.println(trace);
-        }
-        System.out.println();
+        // 太长了，就不打印了
+        //        System.out.println("traces:");
+        //        for (Trace trace : logInfo.traces) {
+        //            System.out.println(trace);
+        //        }
+        //        System.out.println();
 
         System.out.println("direct successor counting: ");
         for (int i = 0; i < directSuccessorCounting.length; i++) {

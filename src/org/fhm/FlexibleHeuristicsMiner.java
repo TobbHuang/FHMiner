@@ -3,6 +3,7 @@ package org.fhm;
 import org.fhm.heuristics.HeuristicsMetrics;
 import org.fhm.heuristics.HeuristicsMinerConstants;
 import org.fhm.heuristics.model.DG;
+import org.fhm.heuristics.model.DGNode;
 import org.fhm.heuristics.model.DGPair;
 import org.fhm.heuristics.model.DGSubSet;
 import org.fhm.log.LogParser;
@@ -14,7 +15,7 @@ import java.util.Iterator;
 /**
  * Created by huangtao on 2017/2/27.
  * <p>
- * main function
+ * miner function
  */
 public class FlexibleHeuristicsMiner {
 
@@ -73,10 +74,10 @@ public class FlexibleHeuristicsMiner {
         DGSubSet outSubSet = new DGSubSet();
         DGSubSet inSubSet = new DGSubSet();
         for (int i = 0; i < heuristicsMetrics.countOfTasks; i++) {
-            double maxOutDependencyMeasure = -1;
+            double maxOutDependencyMeasure = 0;
             DGPair tmpOutPair = null;
 
-            double maxInDependencyMeasure = -1;
+            double maxInDependencyMeasure = 0;
             DGPair tmpInPair = null;
 
             for (int j = 0; j < heuristicsMetrics.countOfTasks; j++) {
@@ -96,9 +97,11 @@ public class FlexibleHeuristicsMiner {
             }
             if (tmpOutPair != null) {
                 outSubSet.addPair(tmpOutPair);
+                //                tmpOutPair.print();
             }
             if (tmpInPair != null) {
                 inSubSet.addPair(tmpInPair);
+                //                tmpInPair.print();
             }
         }
 
@@ -232,7 +235,7 @@ public class FlexibleHeuristicsMiner {
 
 
         // merge all results into a DG
-        DG dependencyGraph = new DG(heuristicsMetrics.countOfTasks);
+        DG dependencyGraph = new DG(heuristicsMetrics.countOfTasks, heuristicsMetrics.logInfo.taskNames);
         l1lSubSet.mergeToDG(dependencyGraph);
         l2lSubSet.mergeToDG(dependencyGraph);
         outSubSet.mergeToDG(dependencyGraph);
@@ -241,13 +244,13 @@ public class FlexibleHeuristicsMiner {
         inPlusSubSet.mergeToDG(dependencyGraph);
 
         dependencyGraph.print();
-
     }
 
     public static void main(String[] args) {
         FlexibleHeuristicsMiner miner = new FlexibleHeuristicsMiner
-                ("/Users/huangtao/Documents/本科毕设/example-logs/exercise1.xes");
+                ("/Users/huangtao/Documents/本科毕设/example-logs/exercise6.xes");
         miner.mine();
+
     }
 
 }

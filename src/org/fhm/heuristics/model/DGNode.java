@@ -22,10 +22,11 @@ public class DGNode {
 
     public void addInput(DGNode input) {
         inputSet.add(input);
+        //        System.out.println(index + " input: " + input.index);
     }
 
     public void addOutput(DGNode output) {
         outputSet.add(output);
+//                System.out.println(index + " output: " + output.index);
     }
-
 }
