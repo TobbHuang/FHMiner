@@ -376,8 +376,7 @@ public class FlexibleHeuristicsMiner {
     }
 
     public static void main(String[] args) {
-        FlexibleHeuristicsMiner miner = new FlexibleHeuristicsMiner
-                ("/Users/huangtao/Documents/本科毕设/example-logs/exercise5.xes");
+        FlexibleHeuristicsMiner miner = new FlexibleHeuristicsMiner("testFiles/exercise5.xes");
         miner.mine();
 
     }

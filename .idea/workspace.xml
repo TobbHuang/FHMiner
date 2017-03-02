@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87594534-b7af-4e11-ba8c-323e73299302" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetDependencySet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetNode.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/DG.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/DGNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/DGPair.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/DGSubSet.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/DG.java" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DG.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/DGNode.java" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/DGPair.java" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGPair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/DGSubSet.java" afterPath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGSubSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise1.xes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise2.xes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise3.xes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise4.xes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise5.xes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testFiles/exercise6.xes" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/FlexibleHeuristicsMiner.class" afterPath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/FlexibleHeuristicsMiner.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java" afterPath="$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fhm/log/LogParser.java" afterPath="$PROJECT_DIR$/src/org/fhm/log/LogParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fhm/log/model/Task.java" afterPath="$PROJECT_DIR$/src/org/fhm/log/model/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/fhm/log/model/Trace.java" afterPath="$PROJECT_DIR$/src/org/fhm/log/model/Trace.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FlexibleHeuristicsMiner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlexibleHeuristicsMiner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="357" column="5" lean-forward="true" selection-start-line="357" selection-start-column="5" selection-end-line="357" selection-end-column="5" />
+            <state relative-caret-position="808">
+              <caret line="380" column="0" lean-forward="true" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,18 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/fhm/log/LogParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="74" column="29" lean-forward="false" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CNet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNet.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,23 +62,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CNetDependencySet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetDependencySet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DGPair.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DGPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGPair.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercise1.xes" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testFiles/exercise1.xes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercise2.xes" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testFiles/exercise2.xes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercise3.xes" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testFiles/exercise3.xes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercise5.xes" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testFiles/exercise5.xes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,20 +124,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Trace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/fhm/log/model/Trace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DG.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DG.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,22 +131,6 @@
               <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DGNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,10 +172,10 @@
         <option value="$PROJECT_DIR$/src/org/fhm/log/LogParser.java" />
         <option value="$PROJECT_DIR$/src/org/fhm/log/model/Trace.java" />
         <option value="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGNode.java" />
-        <option value="$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java" />
         <option value="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNet.java" />
         <option value="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetNode.java" />
         <option value="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetDependencySet.java" />
+        <option value="$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java" />
       </list>
     </option>
   </component>
@@ -271,6 +249,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FHMiner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FHMiner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FHMiner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testFiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,6 +445,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testFiles" />
       <recent name="$PROJECT_DIR$/libs" />
     </key>
   </component>
@@ -880,12 +873,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488176634708</updated>
       <workItem from="1488176638682" duration="30940000" />
-      <workItem from="1488333886055" duration="33346000" />
+      <workItem from="1488333886055" duration="33723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64286000" />
+    <option name="totallyTimeSpent" value="64663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-158" width="1920" height="1080" extended-state="0" />
@@ -1161,16 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="357" column="5" lean-forward="true" selection-start-line="357" selection-start-column="5" selection-end-line="357" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1240,6 +1223,48 @@
         <state relative-caret-position="420">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/exercise1.xes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/exercise2.xes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/exercise3.xes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testFiles/exercise5.xes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="380" column="0" lean-forward="true" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
