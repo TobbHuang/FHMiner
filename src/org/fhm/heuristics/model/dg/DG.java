@@ -1,4 +1,4 @@
-package org.fhm.heuristics.model;
+package org.fhm.heuristics.model.dg;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,14 +11,14 @@ public class DG {
 
     public List<DGNode> dependencyGraphNodes;
 
-    public List<String> taskName;
+    public List<String> taskNames;
 
-    public DG(int taskNum, List<String> taskName) {
+    public DG(int taskNum, List<String> taskNames) {
         dependencyGraphNodes = new ArrayList<>();
         for (int i = 0; i < taskNum; i++) {
             dependencyGraphNodes.add(new DGNode(i));
         }
-        this.taskName = taskName;
+        this.taskNames = taskNames;
     }
 
     public void print() {
@@ -33,7 +33,7 @@ public class DG {
                 if (inputNode.index == 0) {
                     inputTaskName = "Start";
                 } else {
-                    inputTaskName = taskName.get(inputNode.index - 1);
+                    inputTaskName = taskNames.get(inputNode.index - 1);
                 }
                 System.out.print(inputTaskName);
                 if (inIterator.hasNext()) {
@@ -48,7 +48,7 @@ public class DG {
             } else if (node.index == dependencyGraphNodes.size() - 1) {
                 System.out.print("End");
             } else {
-                System.out.print(taskName.get(node.index - 1));
+                System.out.print(taskNames.get(node.index - 1));
             }
             System.out.print(" ");
 
@@ -60,7 +60,7 @@ public class DG {
                 if (outputNode.index == dependencyGraphNodes.size() - 1) {
                     outputTaskName = "End";
                 } else {
-                    outputTaskName = taskName.get(outputNode.index - 1);
+                    outputTaskName = taskNames.get(outputNode.index - 1);
                 }
                 System.out.print(outputTaskName);
                 if (outIterator.hasNext()) {

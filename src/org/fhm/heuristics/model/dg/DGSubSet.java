@@ -1,4 +1,4 @@
-package org.fhm.heuristics.model;
+package org.fhm.heuristics.model.dg;
 
 import org.fhm.heuristics.HeuristicsMetrics;
 

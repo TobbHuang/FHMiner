@@ -7,12 +7,19 @@ public class Task {
 
     String name;
 
-    public Task(String taskName) {
+    int index;
+
+    public Task(String taskName, int index) {
         this.name = taskName;
+        this.index = index;
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getIndex() {
+        return index;
     }
 
 }

@@ -28,6 +28,24 @@ public class Trace {
         return taskList.size();
     }
 
+    public int backwardIndexOf(int start, int index) {
+        for (int i = start; i < taskList.size(); i++) {
+            if (taskList.get(i).getIndex() == index) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int forwardIndexOf(int start, int index) {
+        for (int i = start; i >=0; i--) {
+            if (taskList.get(i).getIndex() == index) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString() {
         String str = "";

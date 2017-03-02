@@ -1,4 +1,4 @@
-package org.fhm.heuristics.model;
+package org.fhm.heuristics.model.dg;
 
 /**
  * Created by huangtao on 2017/2/28.

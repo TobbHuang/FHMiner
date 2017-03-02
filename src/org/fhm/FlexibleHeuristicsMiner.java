@@ -2,14 +2,18 @@ package org.fhm;
 
 import org.fhm.heuristics.HeuristicsMetrics;
 import org.fhm.heuristics.HeuristicsMinerConstants;
-import org.fhm.heuristics.model.DG;
-import org.fhm.heuristics.model.DGNode;
-import org.fhm.heuristics.model.DGPair;
-import org.fhm.heuristics.model.DGSubSet;
+import org.fhm.heuristics.model.cnet.CNet;
+import org.fhm.heuristics.model.cnet.CNetNode;
+import org.fhm.heuristics.model.dg.DG;
+import org.fhm.heuristics.model.dg.DGNode;
+import org.fhm.heuristics.model.dg.DGPair;
+import org.fhm.heuristics.model.dg.DGSubSet;
 import org.fhm.log.LogParser;
 import org.fhm.log.model.LogInfo;
+import org.fhm.log.model.Trace;
 
 import java.io.File;
+import java.util.HashSet;
 import java.util.Iterator;
 
 /**
@@ -244,11 +248,136 @@ public class FlexibleHeuristicsMiner {
         inPlusSubSet.mergeToDG(dependencyGraph);
 
         dependencyGraph.print();
+
+
+        // mine the frequency information of the splits of each task in traces
+        CNet cNet = new CNet(heuristicsMetrics.countOfTasks, heuristicsMetrics.logInfo.taskNames);
+
+        // handle each trace in order
+        for (Trace trace : heuristicsMetrics.logInfo.traces) {
+            // handle "start" first
+            HashSet<DGNode> tmpStartNodeSet = new HashSet<>();
+            DGNode dgStartNode = dependencyGraph.dependencyGraphNodes.get(0);
+            for (DGNode startOutNode : dgStartNode.outputSet) {
+                int pos = trace.backwardIndexOf(0, startOutNode.index - 1);
+                if (pos >= 0) {
+                    int resultPos = searchLastNodeFromPos(pos, startOutNode, trace);
+                    if (resultPos == -1) {
+                        tmpStartNodeSet.add(startOutNode);
+                    }
+                }
+            }
+            cNet.cNetNodes.get(0).addSubSet(tmpStartNodeSet, CNetNode.ADD_OUTPUT_SET);
+
+
+            // handle other nodes
+            for (int i = 0; i < trace.getLength(); i++) {
+                HashSet<DGNode> tmpNodeSet = new HashSet<>();
+                DGNode dgNode = dependencyGraph.dependencyGraphNodes.get(trace.getTask(i).getIndex() + 1);
+                for (DGNode outNode : dgNode.outputSet) {
+                    int pos = trace.backwardIndexOf(i + 1, outNode.index - 1);
+                    if (pos >= 0) {
+                        int resultPos = searchLastNodeFromPos(pos, outNode, trace);
+                        if (resultPos == i) {
+                            tmpNodeSet.add(outNode);
+                        }
+                    } else if (outNode.index == dependencyGraph.dependencyGraphNodes.size() - 1) {
+                        // start node
+                        int resultPos = searchLastNodeFromPos(trace.getLength(), outNode, trace);
+                        if (resultPos == i) {
+                            tmpNodeSet.add(outNode);
+                        }
+                    }
+                }
+                cNet.cNetNodes.get(dgNode.index).addSubSet(tmpNodeSet, CNetNode.ADD_OUTPUT_SET);
+            }
+        }
+
+
+        // handle each trace in order
+        for (Trace trace : heuristicsMetrics.logInfo.traces) {
+            // handle "end" first
+            HashSet<DGNode> tmpEndNodeSet = new HashSet<>();
+            DGNode dgEndNode = dependencyGraph.dependencyGraphNodes.get(dependencyGraph.dependencyGraphNodes.size() -
+                    1);
+            for (DGNode endInNode : dgEndNode.inputSet) {
+                int pos = trace.forwardIndexOf(trace.getLength() - 1, endInNode.index - 1);
+                if (pos >= 0) {
+                    int resultPos = searchFirstNodeFromPos(pos, endInNode, trace);
+                    if (resultPos == -1) {
+                        tmpEndNodeSet.add(endInNode);
+                    }
+                }
+            }
+            cNet.cNetNodes.get(cNet.cNetNodes.size() - 1).addSubSet(tmpEndNodeSet, CNetNode.ADD_INPUT_SET);
+
+
+            // handle other nodes
+            for (int i = 0; i < trace.getLength(); i++) {
+                HashSet<DGNode> tmpNodeSet = new HashSet<>();
+                DGNode dgNode = dependencyGraph.dependencyGraphNodes.get(trace.getTask(i).getIndex() + 1);
+                for (DGNode inNode : dgNode.inputSet) {
+                    int pos = trace.forwardIndexOf(i - 1, inNode.index - 1);
+                    if (pos >= 0) {
+                        int resultPos = searchFirstNodeFromPos(pos, inNode, trace);
+                        if (resultPos == i) {
+                            tmpNodeSet.add(inNode);
+                        }
+                    } else if (inNode.index == 0) {
+                        // end node
+                        int resultPos = searchFirstNodeFromPos(-1, inNode, trace);
+                        if (resultPos == i) {
+                            tmpNodeSet.add(inNode);
+                        }
+                    }
+                }
+                cNet.cNetNodes.get(dgNode.index).addSubSet(tmpNodeSet, CNetNode.ADD_INPUT_SET);
+            }
+        }
+
+
+        cNet.print();
+    }
+
+    /**
+     * 从指定位置往前搜索激活sourceNode的node
+     *
+     * @param sourcePos  起始position
+     * @param sourceNode source DGNode
+     * @param trace      待搜索的trace
+     * @return 目标pos，如果无结果return -1
+     */
+    int searchLastNodeFromPos(int sourcePos, DGNode sourceNode, Trace trace) {
+        for (int i = sourcePos - 1; i >= 0; i--) {
+            DGNode node = sourceNode.contains(trace.getTask(i).getIndex(), DGNode.SEARCH_INPUT_SET);
+            if (node != null) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 从指定位置往后搜索激活sourceNode的node
+     *
+     * @param sourcePos  起始position
+     * @param sourceNode source DGNode
+     * @param trace      待搜索的trace
+     * @return 目标pos，如果无结果return -1
+     */
+    int searchFirstNodeFromPos(int sourcePos, DGNode sourceNode, Trace trace) {
+        for (int i = sourcePos + 1; i < trace.getLength(); i++) {
+            DGNode node = sourceNode.contains(trace.getTask(i).getIndex(), DGNode.SEARCH_OUTPUT_SET);
+            if (node != null) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
         FlexibleHeuristicsMiner miner = new FlexibleHeuristicsMiner
-                ("/Users/huangtao/Documents/本科毕设/example-logs/exercise6.xes");
+                ("/Users/huangtao/Documents/本科毕设/example-logs/exercise5.xes");
         miner.mine();
 
     }

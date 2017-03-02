@@ -71,7 +71,8 @@ public class LogParser {
                 XTrace xTrace = log.get(i);
                 Trace tmpTrace = new Trace();
                 for (int j = 0; j < xTrace.size(); j++) {
-                    tmpTrace.addTask(new Task(xTrace.get(j).getAttributes().get(attribute).toString()));
+                    String taskName = xTrace.get(j).getAttributes().get(attribute).toString();
+                    tmpTrace.addTask(new Task(taskName, logInfo.taskNames.indexOf(taskName)));
                 }
                 logInfo.traces.add(tmpTrace);
             }
