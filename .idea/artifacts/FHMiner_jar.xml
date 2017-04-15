@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FHMiner:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FHMiner_jar</output-path>
+    <root id="archive" name="FHMiner.jar">
+      <element id="module-output" name="FHMiner" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/ezmorph-1.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/commons-lang-2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/json-lib-2.4-jdk15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/commons-beanutils-1.9.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsonlib/commons-collections-3.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/OpenXES-20160212.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/guava-20.0.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/guava-20.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/ezmorph-1.0.6.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/commons-lang-2.6.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/json-lib-2.4-jdk15.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/commons-logging-1.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/commons-beanutils-1.9.3.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jsonlib/commons-collections-3.2.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/OpenXES-20160212.jar" />
+    </root>
+  </artifact>
+</component>
