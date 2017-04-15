@@ -59,8 +59,16 @@ public class CNetDependencySet extends HashSet<CNetNode> {
 
     public String toString(List<String> taskNames) {
         String str = "";
-
         str += "(";
+        str += getSetNames(taskNames);
+        str += ", ";
+        str += getFrequency();
+        str += ")";
+        return str;
+    }
+
+    public String getSetNames(List<String> taskNames) {
+        String str = "";
 
         Iterator<CNetNode> iterator = iterator();
         while (iterator.hasNext()) {
@@ -76,8 +84,9 @@ public class CNetDependencySet extends HashSet<CNetNode> {
             str += taskName + ", ";
         }
 
-        str += getFrequency();
-        str += ")";
+        if (!str.isEmpty()) {
+            str = str.substring(0, str.length() - 2);
+        }
 
         return str;
     }

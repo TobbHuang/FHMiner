@@ -7,45 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87594534-b7af-4e11-ba8c-323e73299302" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/commons-beanutils-1.9.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/commons-collections-3.2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/commons-lang-2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/commons-logging-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/ezmorph-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/jsonlib/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/pmf/plugin/service/PluginService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/FlexibleHeuristicsMiner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/HeuristicsMetrics.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/HeuristicsMinerConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/cnet/CNet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/cnet/CNetDependencySet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/cnet/CNetNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/dg/DG.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/dg/DGNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/dg/DGPair.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/heuristics/model/dg/DGSubSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/log/LogParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/log/model/LogInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/log/model/Task.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/FHMiner/org/fhm/log/model/Trace.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/FlexibleHeuristicsMiner.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/HeuristicsMetrics.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMetrics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/HeuristicsMinerConstants.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMinerConstants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNet.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetDependencySet.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/cnet/CNetNode.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DG.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DG.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGNode.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGPair.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGPair.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/heuristics/model/dg/DGSubSet.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGSubSet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/log/LogParser.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/log/LogParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/log/model/LogInfo.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/log/model/LogInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/log/model/Task.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/log/model/Task.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/fhm/log/model/Trace.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/log/model/Trace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FHMiner.iml" afterPath="$PROJECT_DIR$/FHMiner.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java" afterPath="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,37 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LogParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/log/LogParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DGNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#558#559#0" expanded="false" />
-                <element signature="e#593#594#0" expanded="false" />
-                <element signature="e#637#638#0" expanded="false" />
-                <element signature="e#674#675#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlexibleHeuristicsMiner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,8 +39,18 @@
       <file leaf-file-name="DG.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+            <state relative-caret-position="-128">
+              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlexibleHeuristicsMiner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="266" column="48" lean-forward="false" selection-start-line="266" selection-start-column="48" selection-end-line="266" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -110,23 +59,29 @@
       <file leaf-file-name="CNet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FHMPluginService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java">
+      <file leaf-file-name="CNetNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="84" lean-forward="false" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CNetDependencySet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,8 +89,8 @@
       <file leaf-file-name="HeuristicsMetrics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMetrics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+            <state relative-caret-position="195">
+              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -204,11 +159,13 @@
         <option value="$PROJECT_DIR$/src/org/pmf/plugin/service/PluginService.java" />
         <option value="$PROJECT_DIR$/src/org/pmf/fhm/log/LogParser.java" />
         <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMetrics.java" />
-        <option value="$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java" />
-        <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java" />
         <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DG.java" />
         <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMinerConstants.java" />
+        <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetNode.java" />
+        <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java" />
+        <option value="$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java" />
         <option value="$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java" />
+        <option value="$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java" />
       </list>
     </option>
   </component>
@@ -290,6 +247,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FHMiner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FHMiner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -301,7 +272,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -773,15 +744,16 @@
       <workItem from="1489300940686" duration="1243000" />
       <workItem from="1489397502825" duration="11000" />
       <workItem from="1492151960006" duration="6023000" />
-      <workItem from="1492180761926" duration="2031000" />
+      <workItem from="1492180761926" duration="6943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78363000" />
+    <option name="totallyTimeSpent" value="83275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-106" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -798,7 +770,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14909478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14909478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -833,6 +805,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -840,6 +813,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,13 +845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,6 +892,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -931,6 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -978,13 +948,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,20 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGSubSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1156,6 +1106,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,6 +1114,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,58 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#637#638#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMetrics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1252,13 +1156,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/dg/DGNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/HeuristicsMetrics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FlexibleHeuristicsMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="266" column="48" lean-forward="false" selection-start-line="266" selection-start-column="48" selection-end-line="266" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/FHMPluginService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="84" lean-forward="false" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
+        <state relative-caret-position="916">
+          <caret line="94" column="39" lean-forward="false" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pmf/fhm/heuristics/model/cnet/CNetDependencySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

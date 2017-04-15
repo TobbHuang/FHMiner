@@ -25,6 +25,7 @@ import java.util.Iterator;
 public class FlexibleHeuristicsMiner {
 
     HeuristicsMetrics heuristicsMetrics;
+    CNet cNet;
 
     public FlexibleHeuristicsMiner(String logPath) {
         try {
@@ -42,7 +43,7 @@ public class FlexibleHeuristicsMiner {
             LogInfo logInfo = LogParser.parseLog(log);
 
             heuristicsMetrics = new HeuristicsMetrics(logInfo);
-            heuristicsMetrics.print();
+//            heuristicsMetrics.print();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -263,7 +264,7 @@ public class FlexibleHeuristicsMiner {
 
 
         // mine the frequency information of the splits of each task in traces
-        CNet cNet = new CNet(heuristicsMetrics.countOfTasks, heuristicsMetrics.logInfo.taskNames);
+        cNet = new CNet(heuristicsMetrics.countOfTasks, heuristicsMetrics.logInfo.taskNames);
 
         // handle each trace in order
         for (Trace trace : heuristicsMetrics.logInfo.traces) {
