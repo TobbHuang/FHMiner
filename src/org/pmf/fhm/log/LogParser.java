@@ -4,6 +4,7 @@ import org.deckfour.xes.classification.XEventClass;
 import org.deckfour.xes.classification.XEventClassifier;
 import org.deckfour.xes.in.XesXmlParser;
 import org.deckfour.xes.info.XLogInfoFactory;
+import org.deckfour.xes.model.XEvent;
 import org.deckfour.xes.model.XLog;
 import org.deckfour.xes.model.XTrace;
 import org.pmf.fhm.log.model.LogInfo;
@@ -83,25 +84,20 @@ public class LogParser {
      * @param logInfo
      */
     private void convertXlogToBasicData(XLog log, LogInfo logInfo) {
-
         try {
-            List<XEventClassifier> eventClassifiers = log.getClassifiers();
-            // TODO: 2016/12/29 classifier选择器
-            XEventClassifier classifier = eventClassifiers.get(1);
-            String attribute = classifier.getDefiningAttributeKeys()[0];
-            // TODO: 2016/12/29 不确定这个值取的是否绝对正确，有空验证一下
-            Iterator<XEventClass> iterator = XLogInfoFactory.createLogInfo(log).getNameClasses().getClasses()
-                    .iterator();
-
-            while (iterator.hasNext()) {
-                logInfo.taskNames.add(iterator.next().getId());
+            for(XTrace trace : log){
+                for(XEvent event : trace){
+                    if(!logInfo.taskNames.contains(XLogManager.getEventName(event))){
+                        logInfo.taskNames.add(XLogManager.getEventName(event));
+                    }
+                }
             }
 
             for (int i = 0; i < log.size(); i++) {
                 XTrace xTrace = log.get(i);
                 Trace tmpTrace = new Trace();
                 for (int j = 0; j < xTrace.size(); j++) {
-                    String taskName = xTrace.get(j).getAttributes().get(attribute).toString();
+                    String taskName = XLogManager.getEventName(xTrace.get(j));
                     tmpTrace.addTask(new Task(taskName, logInfo.taskNames.indexOf(taskName)));
                 }
                 logInfo.traces.add(tmpTrace);
