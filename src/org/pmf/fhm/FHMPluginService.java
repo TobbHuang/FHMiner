@@ -42,7 +42,7 @@ public class FHMPluginService implements PluginService {
 
         JSONObject jsn = new JSONObject();
         jsn.element("status", "OK");
-        jsn.element("result", miner.heuristicsMetrics.dependencyGraph.buildJsn());
+        jsn.element("result", miner.heuristicsMetrics.dependencyGraph.buildJsn(miner.heuristicsMetrics));
 
         XLogInfo logInfo = XLogInfoFactory.createLogInfo(log);
         XEventClasses classes = logInfo.getEventClasses();

@@ -2,6 +2,7 @@ package org.pmf.fhm.heuristics.model.dg;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.pmf.fhm.heuristics.HeuristicsMetrics;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,7 +25,7 @@ public class DG {
         this.taskNames = taskNames;
     }
 
-    public JSONObject buildJsn(){
+    public JSONObject buildJsn(HeuristicsMetrics heuristicsMetrics){
         JSONObject jsn = new JSONObject();
 
         JSONArray nodeJsns = new JSONArray();
@@ -32,13 +33,21 @@ public class DG {
         JSONObject startNodeJsn = new JSONObject();
         startNodeJsn.put("label", "Start");
         startNodeJsn.put("detail", "Start");
+        startNodeJsn.put("count", heuristicsMetrics.logInfo.traces.size());
         startNodeJsn.put("type", "DG_NODE");
         nodeJsns.add(startNodeJsn);
 
-        for(String taskName : taskNames){
+        for (int i = 0; i < taskNames.size(); i++) {
+            String taskName = taskNames.get(i);
             JSONObject nodeJsn = new JSONObject();
             nodeJsn.put("label", taskName);
             nodeJsn.put("detail", taskName);
+            int totalCount = 0;
+            for(int followedCount : heuristicsMetrics.directSuccessorCounting[i+1]){
+                totalCount += followedCount;
+            }
+            totalCount -= heuristicsMetrics.directSuccessorCounting[i+1][i+1];
+            nodeJsn.put("count", totalCount);
             nodeJsn.put("type", "DG_NODE");
             nodeJsns.add(nodeJsn);
         }
@@ -46,6 +55,7 @@ public class DG {
         JSONObject endNodeJsn = new JSONObject();
         endNodeJsn.put("label", "End");
         endNodeJsn.put("detail", "End");
+        endNodeJsn.put("count", heuristicsMetrics.logInfo.traces.size());
         endNodeJsn.put("type", "DG_NODE");
         nodeJsns.add(endNodeJsn);
 
@@ -58,10 +68,13 @@ public class DG {
                 link.put("source", source.index);
                 link.put("target", target.index);
                 link.put("type", 1);
+                link.put("frequency", heuristicsMetrics.directSuccessorCounting[source.index][target.index]);
                 links.add(link);
             }
         }
         jsn.put("links", links);
+
+        jsn.put("tracesCount", heuristicsMetrics.logInfo.traces.size());
 
         return jsn;
     }
